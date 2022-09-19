@@ -1,4 +1,4 @@
-*{
+c*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -26,14 +26,30 @@ font-family: 'Varela Round', sans-serif;
     height: 15vh;
     display: flex;
     justify-content: space-between;
+    
     align-items: center;
     padding: 0 4%;
+}
+.nav .menu{
+    background-color: #363c47;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    display: none;
+    color: white;
 }
 .nav img{
     width: 100px;
     height: 50px;
 }
-.nav button{
+.nav .info h2{
+    color: white;
+    font-size: 18px;
+    display: none;
+    border-radius: 0.5rem;
+    background-color: black;
+    padding: 1rem;
+}
+.nav .info button{
     background:none;
     border: none;
     color:#A8AFBD;
@@ -42,10 +58,9 @@ font-family: 'Varela Round', sans-serif;
     height: 40px;
     width: 80px;
     cursor: pointer;
-    position: relative;
     transition: all .3s ease-in-out;
 }
- .nav button:hover{
+ .nav .info button:hover{
     border-radius: 8px;
     height: 40px;
     width: 80px;
@@ -530,7 +545,38 @@ font-size: 9px;
 }
 /* Responsive */
 @media screen and (max-width:700px) {
-    
+    .nav .info{
+        display: none;
+        transition: 0.4s;
+        position: absolute;
+        top: 6rem;
+        left: 10rem;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        background: #363c47;
+        height: 18vh;
+        width: 65vw;
+        border-radius: 0.5rem;
+    }
+    .nav .info button{
+        margin: 0.5rem 0 1rem;
+    }
+    .nav .menu{
+        display: block;
+
+    }
+    .nav .info h2{
+        display: block;
+        font-size: 15px;
+        border-radius: 0.3rem;
+        padding: 1.5rem;
+        width: 60vw;
+        text-align: center;
+    }
+    .bigconten{
+        margin-top: 6rem;
+    }
     .contener{
         width: 90%;
     }
@@ -596,6 +642,38 @@ font-size: 9px;
     }
     
     @media screen and (max-width:300px){
+        .nav .info{
+            display: none;
+            transition: 0.4s;
+            position: absolute;
+            top: 6rem;
+            left: 6rem;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            background: #363c47;
+            height: 12vh;
+            width: 65vw;
+            border-radius: 0.5rem;
+        }
+        .nav .info button{
+            margin-bottom: 0.2rem; 
+        }
+        .nav .menu{
+            display: block;
+    
+        }
+        .nav .info h2{
+            display: block;
+            font-size: 12px;
+            border-radius: 0.3rem;
+            padding: 0.5rem;
+            width: 60vw;
+            text-align: center;
+        }
+        .bigconten{
+            margin-top: 4rem;
+        }
         .fbox{
         width: 50%;
         }
@@ -603,6 +681,8 @@ font-size: 9px;
             display: flex;
             align-items: center;
         }
+
+
 
     
     }
